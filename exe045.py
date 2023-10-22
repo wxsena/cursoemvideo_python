@@ -21,9 +21,9 @@ def verificar_vencedor(escolha_usuario, escolha_computador):
 
 def exibir_jokenpo():
     print("Jokenpô - Escolha sua jogada:")
-    print("1 - Pedra")
-    print("2 - Papel")
-    print("3 - Tesoura")
+    print("[ 1 ] - Pedra")
+    print("[ 2 ] - Papel")
+    print("[ 3 ] - Tesoura")
 
 vitorias_usuario = 0
 vitorias_computador = 0

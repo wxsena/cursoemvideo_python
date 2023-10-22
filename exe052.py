@@ -11,9 +11,14 @@ def eh_primo(n):
 
 print(f"Números até {numero}:")
 
+numeros_primos = []
+
 for i in range(1, numero + 1):
     if eh_primo(i):
+        numeros_primos.append(i)
         print("\033[92m", end="")
     else:
         print("\033[91m", end="")
     print(i, end=" \033[0m")
+
+print("\nNúmeros primos encontrados:", numeros_primos)

@@ -1,17 +1,19 @@
 # Exercício Python #052 - Números primos
 numero = int(input("Digite um número inteiro: "))
 
-if numero <= 1:
-    print(f"{numero} não é um número primo.")
-else:
-    primo = True
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
-    for i in range(2, int(numero ** 0.5) + 1):
-        if numero % i == 0:
-            primo = False
-            break
+print(f"Números até {numero}:")
 
-    if primo:
-        print(f"{numero} é um número primo.")
+for i in range(1, numero + 1):
+    if eh_primo(i):
+        print("\033[92m", end="")
     else:
-        print(f"{numero} não é um número primo.")
+        print("\033[91m", end="")
+    print(i, end=" \033[0m")
